@@ -12,7 +12,7 @@ class MyList
         $this->elements = [];
     }
 
-    public function insert($index, $obj) // thêm phần tử vào vị trí index
+    public function insert($index, $obj)
     {
         if (array_key_exists($index,$this->elements)) {
             $this->elements[$index] = $obj;
@@ -20,16 +20,12 @@ class MyList
         }
     }
 
-    public function add($obj) // add obj vào mảng
+    public function add($obj)
     {
-//       if ($this->isEmpty()){
            return $this->elements[]= $obj;
-//       } else{
-//           echo "Đã đầy";
-//       }
     }
 
-    public function remove($index) // xóa phần tử có vị trí index
+    public function remove($index)
     {
         if (array_key_exists($index , $this->elements)) {
            unset($this->elements[$index]);
@@ -38,7 +34,7 @@ class MyList
 
     }
 
-    public function get($index) // hiện thị giá trị của vị trí Index
+    public function get($index)
     {
         if (array_key_exists($index,$this->elements)){
             return $index;
@@ -47,17 +43,17 @@ class MyList
         }
     }
 
-    public function clear() // xóa toàn bộ
+    public function clear()
     {
-        return $this->elements[] = [];
+        $this->elements = [];
     }
 
-    public function addAll($arr) // thêm 1 mảng vào mảng hiện tại
+    public function addAll($arr)
     {
         return array_merge($this->elements,$arr);
     }
 
-    public function indexOf($obj) // tìm phần tử tại vị trí index
+    public function indexOf($obj)
     {
         if (array_key_exists($obj,$this->elements)){
             return $this->elements[$obj];
@@ -69,7 +65,7 @@ class MyList
 
     public function isEmpty()
     {
-       return $this->size() == $this->elements;
+       return count($this->elements) == 0;
     }
 
     public function sort()
@@ -84,10 +80,9 @@ class MyList
         return $this->elements;
     }
 
-    public function size() // độ dài của mảng
+    public function size()
     {
         return count($this->elements);
     }
-
 
 }
