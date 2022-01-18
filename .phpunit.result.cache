@@ -1,0 +1,1 @@
+{"version":1,"defects":{"ArrayListTest::testAdd":3,"LinkedListTest::test":3,"MyListTest::testMyList":3},"times":{"ArrayListTest::test":0.006,"ArrayListTest::testAdd":0.005,"LinkedListTest::test":0.006,"MyListTest::testMyList":0.006}}
